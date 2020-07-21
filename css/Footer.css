@@ -1,0 +1,84 @@
+.footer {
+    background: black;
+    color: white;
+    margin-top: 100px;
+    font-size: 15px;
+}
+
+.contenedorfooter {
+    display: flex;
+   /* background: rgb(88, 88, 88);*/
+   background: black;
+    width: 100%;
+    margin: auto;
+    
+    
+}
+
+.contenedor1 {
+    background: black;
+    width: 30%;
+    padding: 0 30px;
+
+}
+
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor2 {
+    
+    background: black;
+    width: 35%;
+    padding: 0px 30px;
+    
+
+}
+
+.rsocial{
+    margin: 5px auto;
+    width: 30%;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+   
+
+}
+.rsocial img{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.contenedor3 {
+    width: 30%;
+    background: black;
+    padding: 0 30px;
+    
+
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+
+}
+
+h4 {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    
+
+}
+
+/*hr {
+    border: 1px solid red;
+    
+}*/
+
