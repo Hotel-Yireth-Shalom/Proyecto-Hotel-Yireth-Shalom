@@ -3,7 +3,7 @@ body {
     color: white;
     margin: auto;
     background: url(../img/fondo.jpg) no-repeat center top;
-    padding: 0;
+    padding: 1;
     font-size: 1.2rem;
     line-height: 1.1em;
 }
