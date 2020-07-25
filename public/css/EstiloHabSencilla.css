@@ -69,7 +69,6 @@ img {
     display: flex; 
     width: 40%;
     background: white;
-    background: transparent;
     border-radius: 8px;
     padding: 0px;
     flex-wrap: wrap;
@@ -123,7 +122,6 @@ img {
     margin: 0px;
     padding: 0px;
     
-    
 }
 
 .reserva form{
@@ -149,20 +147,15 @@ input{
    display: flex;
    height: 13px;
    width: 80%;
-   border-radius: 8px;
-   background: transparent;
 }
 
 .reserva button{
     background: rgb(237, 27, 36);
     width: 30%;
-    height: 30%;
-    color: rgb(0, 0, 0);
-    background: transparent;
+    color: white;
     font-size: 20px;
     border-radius: 20px;
     margin-right: 10px;
-    
 }
 
 .reserva button:hover{
