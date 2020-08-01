@@ -1,0 +1,133 @@
+/*.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+header {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 17px;
+
+}
+
+
+.tituloprincipal {
+    margin: 70px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+.contcard {
+    background: #900048;
+    padding: 20px;
+}
+
+.card-deck {
+    width: 95%;
+    margin: auto;
+    padding: 0;
+}
+
+.card img{
+    height: 230px;
+}
+.card h3{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 29px;
+}
+.card p{
+    font-size: 17px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    padding: 0;
+    background:#343A40;
+    color: white;
+   
+}
+
+
+footer .row {
+    background: #343A40;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+.row img{
+    width: 28px;
+    margin-right: 7px;
+}
+
+.row h5{
+    font-size: 15px;
+}
+
+.row ul{
+    margin-top: 30px;
+}
+
+.derechosr{
+    margin-top: 40px;
+    font-size: 13px;
+}
+
+/*----------------------------*/
+
+
+.tituloprincipalhs {
+    margin-top: 40px;
+    padding: 70px;
+    background: #900048;
+    color: white;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.informacionhs{
+    color: black;
+}
+
+.informacionhs img{
+    margin-top: 40px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.descripcion{
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px solid #343A40;
+    padding: 10px 13px;
+    font-size: 16px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.descripcion h4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 29px;
+}
+.iconosservicios img{
+    height: 20px;
+    width: 32px;
+}
+
+iframe{
+    width: 100%;
+}
+
+
+
+
+
