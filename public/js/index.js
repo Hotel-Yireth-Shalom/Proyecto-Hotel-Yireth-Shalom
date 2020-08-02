@@ -1,11 +1,12 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyDXR4x1rOj77ho74nZ3N_Rw3AmrzWQ2Jr0",
-    authDomain: "proyectoweb-hotelys.firebaseapp.com",
-    databaseURL: "https://proyectoweb-hotelys.firebaseio.com",
-    projectId: "proyectoweb-hotelys",
-    storageBucket: "proyectoweb-hotelys.appspot.com",
-    messagingSenderId: "459843385871",
-    appId: "1:459843385871:web:8f2827bac1c44eb50c417a"
+ // Your web app's Firebase configuration
+ var firebaseConfig = {
+    apiKey: "AIzaSyB0N3mE_HXs7XGW6i9xN_SzZJ5AY47QwJY",
+    authDomain: "proyecto-web-hys.firebaseapp.com",
+    databaseURL: "https://proyecto-web-hys.firebaseio.com",
+    projectId: "proyecto-web-hys",
+    storageBucket: "proyecto-web-hys.appspot.com",
+    messagingSenderId: "902711100247",
+    appId: "1:902711100247:web:fca0330ece5dab2e3e3412"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
