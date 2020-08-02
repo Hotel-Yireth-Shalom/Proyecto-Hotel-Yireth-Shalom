@@ -18,17 +18,17 @@ var correoelectronico = document.getElementById('correoelectronico');
 var telefono = document.getElementById('telefono');
 var btnreserva = document.getElementById('btnreserva');
 var fechaentrada = document.getElementById('fechaentrada');
-
+var tipohabitacion = document.getElementById('tipohabitacion');
 
 
 function agregarDatos(user) {
     db.collection("clientes").add({
             nombre: nombre.value,
             apellido: apellido.value,
-            correoelectronico: correoelectronico.value,
+            correoe_lectronico: correoelectronico.value,
             telefono: telefono.value,
-            fechaentrada: fechaentrada.value,
-            
+            fecha_de_entrada: fechaentrada.value,
+            tipo_habitacion: tipohabitacion.value
         })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);

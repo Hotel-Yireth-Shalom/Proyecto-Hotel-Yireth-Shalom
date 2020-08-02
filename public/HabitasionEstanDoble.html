@@ -102,7 +102,7 @@
                     <hr>
                     <div class="descripcion ">
                         <h4 class="card-title  "><strong>Estandar Doble</strong> </h4>
-                        <p><strong>Capacidad Max: 2 personas.</strong>  Completamente equipada
+                        <p><strong>Capacidad Max: 2 personas.</strong> Completamente equipada
                             para los viajes de negocios y placer, Cama Doble (1.40). Incluye baño privado con ducha. TV
                             LED 32 pulgadas con señal por cable, mesa de noche. aire acondicionado (opcional). Wi-Fi y/o
                             LAN.
@@ -112,9 +112,9 @@
                             <i class="fas fa-tv"></i>
                             <i class="fas fa-toilet"></i>
                             <i class="fas fa-shower"></i>
-                             <i class="fas fa-fan"></i>
+                            <i class="fas fa-fan"></i>
                             <i class="fas fa-wind"></i>
-                        </div>                
+                        </div>
                     </div>
                 </div>
 
@@ -123,36 +123,39 @@
                         <p><strong>$45.000 COP</strong> por noche </p>
                         <hr>
 
-                        <form>
-                            <div class="info ">
-                                <label for="" class="mt-3"><strong>Nombre</strong> </label>
-                                <input type="text" class="form-control form-control-sm" id="name"
-                                    placeholder="Ingrese su nombre">
+                        <div class="info ">
 
-                                <label for="" class="mt-3"><strong>Apellido</strong></label>
-                                <input type="text" class="form-control form-control-sm" id="apellidos"
-                                    placeholder="Ingrese su apellido">
+                            <label for="" class="mt-3"><strong>Nombre</strong> </label>
+                            <input type="text" class="form-control form-control-sm" id="nombre"
+                                placeholder="Ingrese su nombre">
 
-                                <label for="" class="mt-3"><strong>Correo electronico</strong></label>
-                                <input type="email" class="form-control form-control-sm" id="correoelectronico"
-                                    placeholder="name@example.com">
+                            <label for="" class="mt-3"><strong>Apellido</strong></label>
+                            <input type="text" class="form-control form-control-sm" id="apellido"
+                                placeholder="Ingrese su apellido">
 
-                                <label for="" class="mt-3"><strong>Telefono</strong></label>
-                                <input type="text" class="form-control form-control-sm" id="telefono"
-                                    placeholder="Su numero telefonico">
+                            <label for="" class="mt-3"><strong>Correo electronico</strong></label>
+                            <input type="email" class="form-control form-control-sm" id="correoelectronico"
+                                placeholder="name@example.com">
 
-                                <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
-                                <input type="date" class="form-control form-control-sm" id="fechaentrada"
-                                    placeholder="fecha de entrada">
+                            <label for="" class="mt-3"><strong>Telefono</strong></label>
+                            <input type="text" class="form-control form-control-sm" id="telefono"
+                                placeholder="Su numero telefonico">
 
-                                <br>
-
-                                <button type="button"
-                                    class="btn btn-danger btn-lg btn-block "><strong>Reservar</strong></button>
+                            <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
+                            <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada"
+                                placeholder="">
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input " type="radio" id="tipohabitacion" value="Estandar Doble"
+                                    checked>
+                                <label class="form-check-label ">Habitación Estandar Doble</label>
                             </div>
-                        </form>
+                            <br>
+                           
+                        </div>
+                        <button id="btnreserva" onclick="agregarDatos()"
+                            class="btn btn-danger btn-lg btn-block">Reservar</button>
                     </div>
-
                 </div>
             </div>
         </div>
