@@ -1,3 +1,15 @@
+ // Your web app's Firebase configuration
+ var firebaseConfig = {
+    apiKey: "AIzaSyAj7QPyNvuUrWWe9GBdXTwbb5aZAeoEzkc",
+    authDomain: "hotel-yireth-shalom-florencia.firebaseapp.com",
+    databaseURL: "https://hotel-yireth-shalom-florencia.firebaseio.com",
+    projectId: "hotel-yireth-shalom-florencia",
+    storageBucket: "hotel-yireth-shalom-florencia.appspot.com",
+    messagingSenderId: "112301165076",
+    appId: "1:112301165076:web:a386235bceca2f2644b501"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
