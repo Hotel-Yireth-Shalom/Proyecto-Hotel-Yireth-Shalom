@@ -10,32 +10,32 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-var db = firebase.firestore();
-
-var nombre = document.getElementById('nombre');
-var apellido = document.getElementById('apellido');
-var correoelectronico = document.getElementById('correoelectronico');
-var telefono = document.getElementById('telefono');
-var btnreserva = document.getElementById('btnreserva');
-var fechaentrada = document.getElementById('fechaentrada');
-
-
-
-function agregarDatos(user) {
-    db.collection("clientes").add({
-            nombre: nombre.value,
-            apellido: apellido.value,
-            correoelectronico: correoelectronico.value,
-            telefono: telefono.value,
-            fechaentrada: fechaentrada.value,
-            
-        })
-        .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
-            alert('reserva realizada', docRef.id);
-        })
-        .catch((error) => {
-            console.error("Error: ", error);
-        });
-
-}
+  var db = firebase.firestore();
+  
+  var nombre = document.getElementById('nombre');
+  var apellido = document.getElementById('apellido');
+  var correoelectronico = document.getElementById('correoelectronico');
+  var telefono = document.getElementById('telefono');
+  var btnreserva = document.getElementById('btnreserva');
+  var fechaentrada = document.getElementById('fechaentrada');
+ 
+  
+  
+  function agregarDatos(user) {
+      db.collection("clientes").add({
+              nombre: nombre.value,
+              apellido: apellido.value,
+              correoelectronico: correoelectronico.value,
+              telefono: telefono.value,
+              fechaentrada: fechaentrada.value,
+           
+          })
+          .then((docRef) => {
+              console.log("Document written with ID: ", docRef.id);
+              alert('reserva realizada', docRef.id);
+          })
+          .catch((error) => {
+              console.error("Error: ", error);
+          });
+  
+  }
