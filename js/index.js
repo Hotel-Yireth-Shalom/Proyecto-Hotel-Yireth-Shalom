@@ -1,15 +1,3 @@
- // Your web app's Firebase configuration
- var firebaseConfig = {
-    apiKey: "AIzaSyB0N3mE_HXs7XGW6i9xN_SzZJ5AY47QwJY",
-    authDomain: "proyecto-web-hys.firebaseapp.com",
-    databaseURL: "https://proyecto-web-hys.firebaseio.com",
-    projectId: "proyecto-web-hys",
-    storageBucket: "proyecto-web-hys.appspot.com",
-    messagingSenderId: "902711100247",
-    appId: "1:902711100247:web:fca0330ece5dab2e3e3412"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
