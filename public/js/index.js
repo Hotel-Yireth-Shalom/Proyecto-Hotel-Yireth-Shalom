@@ -33,7 +33,7 @@ function agregarDatos(user) {
         })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
-            alert('reserva realizada', docRef.id);
+            alert('Reserva realizada', docRef.id);
         })
         .catch((error) => {
             console.error("Error: ", error);

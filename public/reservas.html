@@ -59,37 +59,40 @@
         </nav>
     </header>
     <section class="row justify-content-center h-100">
-        <div class="reserva11">
-            <p class="text-center">RESERVE AQUI</p>
+        <div class="reserva">
+            <p><strong>Reserve aqui</strong> </p>
+            <hr>
+            <div class="info ">
+                <label for="" class="mt-3"><strong>Nombre</strong> </label>
+                <input type="text" class="form-control form-control-sm" id="nombre" placeholder="Ingrese su nombre">
 
-            <label for="" class="mt-3"><strong>Nombre</strong> </label>
-            <input type="text" class="form-control form-control-sm" id="name" placeholder="Ingrese su nombre">
+                <label for="" class="mt-3"><strong>Apellido</strong></label>
+                <input type="text" class="form-control form-control-sm" id="apellido" placeholder="Ingrese su apellido">
 
-            <label for="" class="mt-3"><strong>Apellido</strong></label>
-            <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Ingrese su apellido">
+                <label for="" class="mt-3"><strong>Correo electronico</strong></label>
+                <input type="email" class="form-control form-control-sm" id="correoelectronico"
+                    placeholder="name@example.com">
 
-            <label for="" class="mt-3"><strong>Correo electronico</strong></label>
-            <input type="email" class="form-control form-control-sm" id="correoelectronico"
-                placeholder="name@example.com">
+                <label for="" class="mt-3"><strong>Telefono</strong></label>
+                <input type="text" class="form-control form-control-sm" id="telefono"
+                    placeholder="Su numero telefonico">
 
-            <label for="" class="mt-3"><strong>Telefono</strong></label>
-            <input type="text" class="form-control form-control-sm" id="telefono" placeholder="Su numero telefonico">
+                <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
+                <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada"
+                    placeholder="fecha d">
+                
+                <label for="" class="mt-3"><strong>Tipos De Habitacion</strong></label>
+                <select class="custom-select" id="tipohabitacion">
+                    <option selected disabled value>...</option>
+                    <option value="Sencilla">Sencilla</option>
+                    <option value="Doble">Doble</option>
+                    <option value="Estandar Doble">Estandar Doble</option>
 
-            <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
-            <input type="date" class="form-control form-control-sm" id="fechaentrada" placeholder="fecha de entrada">
-            <label for="" class="mt-3"><strong>Habitaciones</strong></label>
-            <select class="custom-select">
-                <option selected>Tipos De Habitaciones</option>
-                <option value="1">Sencilla</option>
-                <option value="2">Doble</option>
-                <option value="3">Estandar Doble</option>
-
-            </select>
+                </select>
+            </div>
             <br>
-
-            <button type="button" class="btn btn-danger btn-lg btn-block"><strong>Reservar</strong></button>
+            <button id="btnreserva" onclick="agregarDatos()" class="btn btn-danger btn-lg btn-block">Reservar</button>
         </div>
-
     </section>
 
     <footer>
@@ -132,7 +135,7 @@
                                 ildaguillen04@gmail.com</p>
                         </li>
                         <li>
-                            <p class="text-white">Tel: 3143765800 -
+                            <p class="text-white">Tel: 3124563812 -
                                 3103313034</p>
                         </li>
                     </ul>
