@@ -11,10 +11,20 @@ body {
     font-size: 20px;
 }
 
+
+
 header {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 17px;
+    background: #343A40;
+}
 
+.nav a{
+color: white;
+font-size: 13px;
+padding-right: 10px;
+height: 0px;
+font-weight: bold;
 }
 
 
