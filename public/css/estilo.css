@@ -20,10 +20,11 @@ header {
 }
 
 .nav a{
-color: white;
-font-size: 13px;
-padding-right: 10px;
-height: 0px;
+color: rgba(255, 255, 255, 0.836);
+font-size: 12px;
+height: 0;
+padding-right: 15px;
+font-family: 'Nanum Myeongjo', serif;
 font-weight: bold;
 }
 
@@ -156,30 +157,28 @@ iframe{
     text-align: center;
     font-size: 20px;
 }
-.reserva11{
-    
-    margin-top: 40px;
-    border-radius: 5px;
-    border: 1.2px solid #2e2b2b;
-    padding: 70px 25px  15px  25px;
-    font-size: 16px;
-    font-family: 'Nanum Myeongjo', serif;
-}
-.reserva11 p{
-    font-size: 50px;
 
+.logologin {
+    margin: auto;
+    width: 100px;
+}
+.logologin img{
+    width: 100px;
 }
 
-.Logo-img .avatar {
-    width: 115px;
-    height: 115px;
-    border-radius: 20%;
-    position: absolute;
-    top: -115px;
-    left: calc(50% - 50px);
-  }
+
 
  
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -24,33 +24,72 @@ var tipohabitacion = document.getElementById('tipohabitacion');
 var btnreserva = document.getElementById('btnreserva');
 var btnActualizar = document.getElementById('btnActualizar');
 var idUsuario = document.getElementById('id');
- function agregarDatos(user) {
+
+// login y registro
+var emailUser = document.getElementById('emailUser');
+var passUser = document.getElementById('passUser');
+
+var emailUsuarioLogueado = document.getElementById('emailUsuarioLogueado');
 
 
-     db.collection("clientes").add({
-             nombre: nombre.value,
-             apellido: apellido.value,
-             correoe_lectronico: correoelectronico.value,
-             telefono: telefono.value,
-             fecha_de_entrada: fechaentrada.value,
-             tipo_habitacion: tipohabitacion.value
-         })
-         .then((docRef) => {
-             console.log("Document written with ID: ", docRef.id);
-             alert('Reserva realizada', docRef.id);
-             limpiarDatos();
-         })
-         .catch((error) => {
-             console.error("Error: ", error);
-         });
- }
- 
+function agregarDatos(user) {
+    db.collection("clientes").add({
+            nombre: nombre.value,
+            apellido: apellido.value,
+            correoe_lectronico: correoelectronico.value,
+            telefono: telefono.value,
+            fecha_de_entrada: fechaentrada.value,
+            tipo_habitacion: tipohabitacion.value
+        })
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+            alert('Reserva realizada', docRef.id);
+            limpiarDatos();
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        });
+}
 
- function limpiarDatos() {
-     nombre.value = "";
-     apellido.value = "";
-     correoelectronico.value = "";
-     telefono.value = "";
-     fechaentrada.value = "";
-     tipohabitacion.value = "";
- }
+
+function limpiarDatos() {
+    nombre.value = "";
+    apellido.value = "";
+    correoelectronico.value = "";
+    telefono.value = "";
+    fechaentrada.value = "";
+    tipohabitacion.value = "";
+}
+
+//--------------------------------------------
+
+function limpiarDatosLogin() {
+    emailUser.value = "";
+    passUser.value = "";
+}
+
+function registarUsuario() {
+    firebase.auth().createUserWithEmailAndPassword(emailUser.value, passUser.value)
+        .then(() => {
+
+            console.log("El usuario se ha registrado");
+
+        })
+        .catch(function (error) {
+            console.log("Error: ", error.message);
+        });
+}
+
+function login() {
+    var uno = emailUser.value;
+    firebase.auth().signInWithEmailAndPassword(uno, passUser.value)
+        .then((user) => {
+            sessionStorage.setItem('login', user.email);
+            window.location.href = 'administrador.html';
+        })
+        .catch(function (error) {
+            console.log("Error: ", error.message);
+            limpiarDatosLogin();
+        });
+}
+
