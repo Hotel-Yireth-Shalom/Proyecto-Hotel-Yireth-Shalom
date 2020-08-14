@@ -20,7 +20,9 @@
  var correoelectronico = document.getElementById('correoelectronico');
  var telefono = document.getElementById('telefono');
  var fechaentrada = document.getElementById('fechaentrada');
+ var fechasalida = document.getElementById('fechasalida');
  var tipohabitacion = document.getElementById('tipohabitacion');
+ var estadoo = document.getElementById('estadoo');
  var btnreserva = document.getElementById('btnreserva');
  var btnActualizar = document.getElementById('btnActualizar');
  var idUsuario = document.getElementById('id');
@@ -34,7 +36,9 @@
              correoe_lectronico: correoelectronico.value,
              telefono: telefono.value,
              fecha_de_entrada: fechaentrada.value,
+             fecha_de_salida: fechasalida.value,
              tipo_habitacion: tipohabitacion.value,
+             estado_cliente: estadoo.value,
          })
          .then((docRef) => {
              console.log("Document written with ID: ", docRef.id);
@@ -62,11 +66,13 @@
                        <td>${doc.data().correoe_lectronico}</td>
                        <td>${doc.data().telefono}</td>
                        <td>${doc.data().fecha_de_entrada}</td>
+                       <td>${doc.data().fecha_de_salida}</td>
                        <td>${doc.data().tipo_habitacion}</td>
+                       <td>${doc.data().estado_cliente}</td>
                        <td>
                             <button onclick="eliminar('${doc.id}')" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
                             <button onclick="editar('${doc.id}')" class="btn btn-info"><i class="far fa-edit"></i></button>
-                        </td>
+                        </td>                  
                    </tr>           
                `;
              });
@@ -91,13 +97,15 @@
      btnActualizar.classList.remove('d-none');
      db.collection("clientes").doc(id).get()
          .then((doc) => {
-
              idUsuario.value = id;
-             txtname.value = doc.data().nombre;
-             apellidos.value = doc.data().apellido;
-             correoelectronico.value = correoe_lectronico;
+             nombre.value = doc.data().nombre;
+             apellido.value = doc.data().apellido;
+             correoelectronico.value = doc.data().correoe_lectronico;
              telefono.value = doc.data().telefono;
-             fecha_de_entrada.value = doc.data().fecha_de_entrada;
+             fechaentrada.value = doc.data().fecha_de_entrada;
+             fechasalida.value = doc.data().fecha_de_salida;
+             tipohabitacion.value = doc.data().tipo_habitacion;
+             estadoo.value = doc.data().estado_cliente;
          })
          .catch((error) => {
              console.log("Error: ", error);
@@ -111,7 +119,10 @@
              correoe_lectronico: correoelectronico.value,
              telefono: telefono.value,
              fecha_de_entrada: fechaentrada.value,
+             fecha_de_salida: fechasalida.value,
              tipo_habitacion: tipohabitacion.value,
+             estado_cliente: estadoo.value,
+
          })
          .then(() => {
              limpiarDatos()
@@ -132,28 +143,29 @@
      correoelectronico.value = "";
      telefono.value = "";
      fechaentrada.value = "";
+     fechasalida.value = "";
      tipohabitacion.value = "";
+     estadoo.value = "";
  }
 
 
  //------------------------------------
  function cerrarSesion() {
-    firebase.auth().signOut()
-        .then(() => {
-            console.log("Sesion cerrada exitosamente");
-            window.location.href = 'index.html';
-        }).catch((error) => {
-            console.log(error.message)
-        });
-}
+     firebase.auth().signOut()
+         .then(() => {
+             console.log("Sesion cerrada exitosamente");
+             window.location.href = 'index.html';
+         }).catch((error) => {
+             console.log(error.message)
+         });
+ }
 
-function estado() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            emailUsuarioLogueado.innerHTML = user.email;
-        }
-        else {
-            window.location.href = 'index.html';
-        }
-    });
-}
+ function estado() {
+     firebase.auth().onAuthStateChanged(function (user) {
+         if (user) {
+             emailUsuarioLogueado.innerHTML = user.email;
+         } else {
+             window.location.href = 'index.html';
+         }
+     });
+ }

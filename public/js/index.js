@@ -15,22 +15,23 @@ var db = firebase.firestore();
 
 
 var listaCliente = document.getElementById('listaCliente');
-var nombre = document.getElementById('nombre');
-var apellido = document.getElementById('apellido');
-var correoelectronico = document.getElementById('correoelectronico');
-var telefono = document.getElementById('telefono');
-var fechaentrada = document.getElementById('fechaentrada');
-var tipohabitacion = document.getElementById('tipohabitacion');
-var btnreserva = document.getElementById('btnreserva');
-var btnActualizar = document.getElementById('btnActualizar');
-var idUsuario = document.getElementById('id');
+ var nombre = document.getElementById('nombre');
+ var apellido = document.getElementById('apellido');
+ var correoelectronico = document.getElementById('correoelectronico');
+ var telefono = document.getElementById('telefono');
+ var fechaentrada = document.getElementById('fechaentrada');
+ var fechasalida = document.getElementById('fechasalida');
+ var tipohabitacion = document.getElementById('tipohabitacion');
+ var estadoo = document.getElementById('estadoo');
+ var btnreserva = document.getElementById('btnreserva');
+ var btnActualizar = document.getElementById('btnActualizar');
+ var idUsuario = document.getElementById('id');
 
 // login y registro
 var emailUser = document.getElementById('emailUser');
 var passUser = document.getElementById('passUser');
 
 var emailUsuarioLogueado = document.getElementById('emailUsuarioLogueado');
-
 
 function agregarDatos(user) {
     db.collection("clientes").add({
@@ -39,7 +40,9 @@ function agregarDatos(user) {
             correoe_lectronico: correoelectronico.value,
             telefono: telefono.value,
             fecha_de_entrada: fechaentrada.value,
-            tipo_habitacion: tipohabitacion.value
+            fecha_de_salida: fechasalida.value,
+            tipo_habitacion: tipohabitacion.value,
+            estado_cliente: estadoo.value,
         })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
@@ -58,7 +61,9 @@ function limpiarDatos() {
     correoelectronico.value = "";
     telefono.value = "";
     fechaentrada.value = "";
-    tipohabitacion.value = "";
+    fechasalida.value = "";
+    //tipohabitacion.value = "";
+    //estadoo.value = "";
 }
 
 //--------------------------------------------
@@ -92,4 +97,3 @@ function login() {
             limpiarDatosLogin();
         });
 }
-

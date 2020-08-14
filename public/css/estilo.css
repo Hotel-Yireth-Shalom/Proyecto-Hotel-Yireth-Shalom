@@ -29,6 +29,7 @@ font-weight: bold;
 }
 
 
+
 .tituloprincipal {
     margin: 70px;
     font-family: 'Nanum Myeongjo', serif;
@@ -166,6 +167,12 @@ iframe{
     width: 100px;
 }
 
+thead tr{
+    font-size: 14px;
+}
+tbody{
+    font-size: 14px;
+}
 
 
  

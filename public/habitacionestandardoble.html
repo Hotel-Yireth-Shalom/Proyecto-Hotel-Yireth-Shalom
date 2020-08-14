@@ -148,15 +148,22 @@
                             <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
                             <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada"
                                 placeholder="">
-                            <br>
-                            <div class="form-check">
+
+                            <label for="" class="mt-3"><strong>Fecha de salida</strong></label>
+                            <input type="date" class="form-control foe entradarm-control-sm" id="fechasalida">
+
+                            <div class="form-check mt-3">
                                 <input class="form-check-input " type="radio" id="tipohabitacion" value="Estandar Doble"
                                     checked>
                                 <label class="form-check-label ">Habitación Estandar Doble</label>
                             </div>
-                            <br>
+
+                            <div class="form-check mt-3 d-none">
+                                <input class="form-check-input " type="radio" id="estadoo" value="Pendiente" checked>
+                            </div>
 
                         </div>
+                        <br>
                         <button id="btnreserva" onclick="agregarDatos()"
                             class="btn btn-danger btn-lg btn-block">Reservar</button>
                     </div>

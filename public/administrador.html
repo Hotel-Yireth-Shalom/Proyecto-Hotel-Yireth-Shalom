@@ -43,6 +43,7 @@
                     <p><strong>Reservar</strong> </p>
                     <hr>
                     <div class="info ">
+                        <input id="id" type="hidden" class="d-none">
                         <label for="" class="mt-3"><strong>Nombre</strong> </label>
                         <input type="text" class="form-control form-control-sm" id="nombre"
                             placeholder="Ingrese su nombre">
@@ -60,8 +61,11 @@
                             placeholder="Su numero telefonico">
 
                         <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
-                        <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada"
-                            placeholder="fecha d">
+                        <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada">
+
+                        <label for="" class="mt-3"><strong>Fecha de salida</strong></label>
+                        <input type="date" class="form-control foe entradarm-control-sm" id="fechasalida">
+
 
                         <label for="" class="mt-3"><strong>Tipos De Habitacion</strong></label>
                         <select class="custom-select" id="tipohabitacion">
@@ -69,8 +73,16 @@
                             <option value="Sencilla">Sencilla</option>
                             <option value="Doble">Doble</option>
                             <option value="Estandar Doble">Estandar Doble</option>
-
                         </select>
+
+                        <div><label for="" class="mt-3"><strong>Estado</strong></label>
+                            <select class="custom-select" id="estadoo">
+                                <option selected disabled value>...</option>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="Reservado">Reservado</option>
+                            </select></div>
+
+
                     </div>
                     <br>
                     <button id="btnreserva" onclick="agregarDatos()"
@@ -91,8 +103,11 @@
                                 <th scope="col">correo electronico</th>
                                 <th scope="col">telefono</th>
                                 <th scope="col">Fecha de entrada</th>
+                                <th scope="col">Fecha de salida</th>
                                 <th>Tipos De Habitacion</th>
-                                <th scope="col">Actualizar datos</th>
+                                <th scope="col">estado</th>
+                                <th scope="col">editar</th>
+
                             </tr>
                         </thead>
                         <tbody id="listaCliente">

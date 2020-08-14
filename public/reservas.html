@@ -87,8 +87,10 @@
                             placeholder="Su numero telefonico">
 
                         <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
-                        <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada"
-                            placeholder="fecha d">
+                        <input type="date" class="form-control foe entradarm-control-sm" id="fechaentrada">
+
+                        <label for="" class="mt-3"><strong>Fecha de salida</strong></label>
+                        <input type="date" class="form-control foe entradarm-control-sm" id="fechasalida">
 
                         <label for="" class="mt-3"><strong>Tipos De Habitacion</strong></label>
                         <select class="custom-select" id="tipohabitacion">
@@ -96,8 +98,12 @@
                             <option value="Sencilla">Sencilla</option>
                             <option value="Doble">Doble</option>
                             <option value="Estandar Doble">Estandar Doble</option>
-
                         </select>
+                        
+                        <div class="form-check mt-3 d-none">
+                            <input class="form-check-input " type="radio" id="estadoo" value="Pendiente" checked>
+                        </div>
+                        
                     </div>
                     <br>
                     <button id="btnreserva" onclick="agregarDatos()"
