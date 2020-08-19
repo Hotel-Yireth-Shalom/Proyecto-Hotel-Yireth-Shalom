@@ -35,10 +35,11 @@
 
         </nav>
     </header>
-    <section class="infodireccion">
+    <section class="administrador">
         <div class="container">
-
-            <section class="row justify-content-center h-100">
+            <h1 class="text-center mt-3">Modulo Administador</h1>
+            <p>Bienvenido: <label id="emailUsuarioLogueado">xxxx</label></p>
+            <div class="row justify-content-center h-100">
                 <div class="reserva">
                     <p><strong>Reservar</strong> </p>
                     <hr>
@@ -90,9 +91,9 @@
                     <button id="btnActualizar" onclick="actualizarDatos()" class="btn btn-warning">Actualizar
                         Datos</button>
                 </div>
-            </section>
+            </div>
 
-            <div class="col">
+            <div class="tablaclientes col">
                 <h2>Clientes </h2>
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -114,6 +115,18 @@
 
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <div class="agregararchivos">
+                <h2>Agregar Archivos</h2>
+                <div class=" row mt-3">
+                    <div class="col">
+                        <input type="file" name="archivo" id="archivo">
+                        <input onclick="subirImagen()" type="button" name="btnSubirImg" id="btnSubirImg"
+                            class="btn btn-primary" value="Subir Imagen">
+                        <img src="" alt="" name="imgSudida" id="imgSudida">
+                    </div>
                 </div>
             </div>
 
@@ -182,6 +195,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
 
     <!-- ______js_________ -->
     <script src="js/admin.js"></script>

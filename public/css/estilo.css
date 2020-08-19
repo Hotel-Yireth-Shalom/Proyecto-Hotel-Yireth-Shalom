@@ -140,7 +140,7 @@ iframe{
 .reserva{
     margin-top: 40px;
     border-radius: 5px;
-    border: 1.2px solid #F2F2F2;
+    border: 1.2px solid #bebebe5d;
     padding: 10px 25px  15px  25px;
     font-size: 16px;
     font-family: 'Nanum Myeongjo', serif;
@@ -166,6 +166,18 @@ iframe{
 .logologin img{
     width: 100px;
 }
+.administrador {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.tablaclientes{
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1.2px solid #bebebe5d;
+    padding: 10px 25px  15px  25px;
+    font-size: 16px;
+    font-family: 'Nanum Myeongjo', serif;
+}
 
 thead tr{
     font-size: 14px;
@@ -175,8 +187,15 @@ tbody{
 }
 
 
+.agregararchivos{
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1.2px solid #bebebe5d;
+    padding: 10px 25px  15px  25px;
+    font-size: 16px;
+    font-family: 'Nanum Myeongjo', serif;
+}
  
-
 
 
 
