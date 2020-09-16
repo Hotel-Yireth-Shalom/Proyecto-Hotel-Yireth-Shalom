@@ -1,0 +1,54 @@
+{{> navegacion}}
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center h-100">
+            <form class="reserva" method="POST" action="/reservasP">
+                <p><strong>Reserve aqui</strong> </p>
+                <hr>
+                <div class="info">
+                    <label for=" ninguno" class="mt-3"><strong>Nombre</strong> </label>
+                    <input type="text" class="form-control form-control-sm" name="nombre"
+                        placeholder="Ingrese su nombre">
+
+                    <label for="ninguno " class="mt-3"><strong>Apellido</strong></label>
+                    <input type="text" class="form-control form-control-sm" name="apellido"
+                        placeholder="Ingrese su apellido">
+
+                    <label for="ninguno " class="mt-3"><strong>Correo electronico</strong></label>
+                    <input type="email" class="form-control form-control-sm" name="correoelectronico"
+                        placeholder="name@example.com">
+
+                    <label for="ninguno" class="mt-3"><strong>Telefono</strong></label>
+                    <input type="text" class="form-control form-control-sm" name="telefono"
+                        placeholder="Su numero telefonico">
+
+                    <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
+                    <input type="date" class="form-control foe
+                        entradarm-control-sm" name="fechaentrada">
+
+                    <label for="" class="mt-3"><strong>Fecha de salida</strong></label>
+                    <input type="date" class="form-control foe
+                        entradarm-control-sm" name="fechasalida">
+
+                    <label for="" class="mt-3"><strong>Tipos De Habitacion</strong></label>
+                    <select class="custom-select" name="tipohabitacion">
+                        <option selected disabled value>...</option>
+                        <option value="Sencilla">Sencilla</option>
+                        <option value="Doble">Doble</option>
+                        <option value="Estandar Doble">Estandar Doble</option>
+                    </select>
+                    <div class="form-check mt-3 d-none">
+                        <input class="form-check-input" type="radio" name="estadoo" value="Pendiente" checked>
+                    </div>
+                    <button id="btnreserva" class="btn btn-danger btn-lg btn-block mt-3">Reservar</button>
+            </form>
+
+
+        </div>
+    </div>
+    </div>
+</section>
+
+
+{{> footer}}
