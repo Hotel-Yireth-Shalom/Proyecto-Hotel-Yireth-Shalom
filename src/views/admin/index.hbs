@@ -2,7 +2,6 @@
 <section class="administrador">
     <div class="container">
         <h1 class="text-center mt-3">Modulo Administador</h1>
-        <p>Bienvenido: <label id="emailUsuarioLogueado">xxxx</label></p>
         <div class="row justify-content-center h-100">
             <form class="reservap" method="POST" action="/admin">
                 <p><strong>Reservar</strong> </p>
@@ -44,7 +43,7 @@
 
                     <div><label for="" class="mt-3"><strong>Numero de Habitacion</strong></label>
                         <select class="custom-select" name="nhabitacion">
-                            <option selected disabled value>sencilla</option>
+                            <option selected disabled value>Sencilla</option>
                             <option value="101">101</option>
                             <option value="102">102</option>
                             <option value="103">103</option>
@@ -72,12 +71,10 @@
                             <option value="Pendiente">Pendiente</option>
                             <option value="Reservado">Reservado</option>
                         </select></div>
-
-
                 </div>
                 <br>
                 <button id="btnreserva" class="btn btn-danger btn-lg btn-block">Reservar</button>
-                <button id="btnActualizar" class="btn btn-warning">Actualizar
+                <button id="btnActualizar" class="btn btn-warning d-none">Actualizar
                     Datos</button>
             </form>
         </div>
@@ -101,7 +98,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
                     {{#each clientes}}
                     <tr>
                         <td>{{nombre}}</td>
@@ -115,10 +111,8 @@
                         <td>{{estado_cliente}}</td>
                         <td><a href="/eliminar-clientes/{{@key}}" class="btn btn-danger"><i
                                     class="far fa-trash-alt"></i></a>
-                            <button href="/editar-clientes/{{@key}}" class="btn btn-info"><i
-                                    class="far fa-edit"></i></button></td>
-
-
+                            <a href="/editar-clientes/{{@key}}" class="btn btn-info"><i class="far fa-edit"></i></a>
+                        </td>
                         <!--<button href="/delete-clientes/{{@key}}" class="btn btn-danger"><i
                                         class="far fa-trash-alt"></i></button>
                                         <button class="btn btn-info"><i class="far fa-edit"></i></button></td>  -->

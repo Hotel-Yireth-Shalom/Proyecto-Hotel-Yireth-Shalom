@@ -23,11 +23,10 @@ router.post('/habitacionD', controlador.reservasd);
 router.post('/habitacionE', controlador.reservase);
 router.post('/admin', controlador.reservasa);
 router.post('/-admin', controlador.loginn);
+router.post('/a', controlador.cerrarSesion);
+
+
 //router.post('/registarUsuario', controlador.registarUsuario);
-//router.post('/', controlador.estado);
-
-
-
 //router.get('/leerdatos', controlador.leerDatos);
 
 module.exports = router;

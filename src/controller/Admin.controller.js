@@ -7,7 +7,7 @@ const {
 
 const controlador = {};
 const db = firebase.firestore();
-const auth=firebase.auth();
+const auth = firebase.auth();
 
 controlador.inicio = (req, res) => {
     res.render('index');
@@ -82,7 +82,6 @@ controlador.reservasp = (req, res) => {
 
 controlador.reservasd = (req, res) => {
     console.log(req.body);
-
     db.collection("clientes").add({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -155,10 +154,8 @@ controlador.reservass = (req, res) => {
 }
 
 
-
 controlador.reservasa = async (req, res) => {
     console.log(req.body);
-
     db.collection("clientes").add({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -183,26 +180,8 @@ controlador.reservasa = async (req, res) => {
     });
 }
 
-const limpiarDatos = () => {
-    return new Promise(req => {
-        req.body.nombre = "";
-        req.body.apellido = "";
-        req.body.correoelectronico = "";
-        req.body.telefono = "";
-        req.body.fechaentrada = "";
-        req.body.fechasalida = "";
-        req.body.tipohabitacion = "";
-        req.body.nhabitacion = "";
-        req.body.estadoo = "";
-    })
-}
 
 //__________________________________________________
-
-function limpiarDatosLogin() {
-    emailUser.value = "";
-    passUser.value = "";
-}
 
 controlador.registarUsuario = (req, res) => {
     console.log(req.body);
@@ -210,7 +189,7 @@ controlador.registarUsuario = (req, res) => {
     auth.createUserWithEmailAndPassword(req.body.emailUser, req.body.passUser)
         .then(() => {
             console.log("El usuario se ha registrado");
-            let user=auth.currentUser;
+            let user = auth.currentUser;
             user.updateProfile({
                 phoneNumber: parseInt(req.body.number.value)
             });
@@ -223,13 +202,11 @@ controlador.registarUsuario = (req, res) => {
 }
 
 
-
-
 controlador.loginn = (req, res) => {
     console.log(req.body);
     auth.signInWithEmailAndPassword(req.body.emailUser, req.body.passUser)
-        .then(async( ) => {
-           res.render("./admin", {
+        .then(async () => {
+            res.render("./admin", {
                 clientes: await leerdatos()
             });
         })
@@ -238,16 +215,17 @@ controlador.loginn = (req, res) => {
             limpiarDatosLogin();
         });
 }
+controlador.cerrarSesion = (req, res) => {
+    console.log(req.body);
+    auth.signOut()
+        .then(() => {
+            console.log("Sesion cerrada exitosamente");
+            res.redirect('/');
 
+        }).catch((error) => {
+            console.log(error.message)
+        });
+}
 
-   /* controlador.estado= (req, res) => 
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            emailUsuarioLogueado = user.email;
-        } else {
-            res.render("./");
-        }
-    });
-}*/
 
 module.exports = controlador;
