@@ -14,7 +14,6 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -63,33 +62,76 @@
             </div>
 
             <div class="col-sm-4">
-                <form class="reserva" method="POST" action="/habitacionS">
+
+                <form class="reserva needs-validation" method="POST" action="/habitacionS" novalidate>
                     <p><strong>$30.000 COP</strong> por noche </p>
                     <hr>
                     <div class="info">
-                        <label for=" ninguno" class="mt-3"><strong>Nombre</strong> </label>
-                        <input type="text" class="form-control form-control-sm" name="nombre"
-                            placeholder="Ingrese su nombre">
+                        <div><label for="" class="mt-3"><strong>Nombre</strong> </label>
+                            <input type="text" class="form-control form-control-sm" name="nombre"
+                                placeholder="Ingrese su nombre" id="validationCustom01" required>
+                            <div class="invalid-feedback">
+                                Ingrese su nombre.
+                            </div>
+                            <div class="valid-feedback">
+                                Muy bien!
+                            </div>
+                        </div>
 
-                        <label for="ninguno " class="mt-3"><strong>Apellido</strong></label>
-                        <input type="text" class="form-control form-control-sm" name="apellido"
-                            placeholder="Ingrese su apellido">
+                        <div><label for="" class="mt-3"><strong>Apellido</strong></label>
+                            <input type="text" class="form-control form-control-sm" name="apellido"
+                                placeholder="Ingrese su apellido" id="validationCustom01" required>
+                            <div class="invalid-feedback">
+                                Ingrese su apellido.
+                            </div>
+                            <div class="valid-feedback">
+                                Muy bien!
+                            </div>
+                        </div>
 
-                        <label for="ninguno " class="mt-3"><strong>Correo electronico</strong></label>
-                        <input type="email" class="form-control form-control-sm" name="correoelectronico"
-                            placeholder="name@example.com">
+                        <div> <label for="" class="mt-3"><strong>Correo electronico</strong></label>
+                            <input type="email" class="form-control form-control-sm" name="correoelectronico"
+                                placeholder="name@example.com" id="validationCustom01" required>
+                            <div class="invalid-feedback">
+                                Ingrese un correo electronico.
+                            </div>
+                            <div class="valid-feedback">
+                                Muy bien!
+                            </div>
+                        </div>
+                        <div> <label for="" class="mt-3"><strong>Telefono</strong></label>
+                            <input type="text" class="form-control form-control-sm" name="telefono"
+                                placeholder="Su numero telefonico" id="validationCustom01" required>
+                            <div class="invalid-feedback">
+                                Ingrese numero telefonico.
+                            </div>
+                            <div class="valid-feedback">
+                                Muy bien!
+                            </div>
+                        </div>
 
-                        <label for="ninguno" class="mt-3"><strong>Telefono</strong></label>
-                        <input type="text" class="form-control form-control-sm" name="telefono"
-                            placeholder="Su numero telefonico">
 
-                        <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
-                        <input type="date" class="form-control foe
-                        entradarm-control-sm" name="fechaentrada">
+                        <div> <label for="" class="mt-3"><strong>Fecha de entrada</strong></label>
+                            <input type="date" class="form-control foe
+                        entradarm-control-sm" name="fechaentrada" id="validationCustom01" required>
+                            <div class="invalid-feedback">
+                                Seleccione una fecha de entrada.
+                            </div>
+                            <div class="valid-feedback">
+                                Muy bien!
+                            </div>
+                        </div>
 
-                        <label for="" class="mt-3"><strong>Fecha de salida</strong></label>
-                        <input type="date" class="form-control foe
-                        entradarm-control-sm" name="fechasalida">
+                        <div><label for="" class="mt-3"><strong>Fecha de salida</strong></label>
+                            <input type="date" class="form-control foe
+                        entradarm-control-sm" name="fechasalida" id="validationCustom01" required>
+                            <div class="invalid-feedback">
+                                Seleccione una fecha de salida.
+                            </div>
+                            <div class="valid-feedback">
+                                Muy bien!
+                            </div>
+                        </div>
 
                         <div class="form-check mt-3">
                             <input class="form-check-input" type="radio" name="tipohabitacion" value="Sencilla" checked>
@@ -99,7 +141,9 @@
                         <div class="form-check mt-3 d-none">
                             <input class="form-check-input" type="radio" name="estadoo" value="Pendiente" checked>
                         </div>
-                        <button id="btnreserva" class="btn btn-danger btn-lg btn-block mt-3">Reservar</button>
+
+                        <button id="btnreserva" class="btn btn-danger btn-lg btn-block mt-3"
+                            type="submit">Reservar</button>
                     </div>
                 </form>
             </div>
