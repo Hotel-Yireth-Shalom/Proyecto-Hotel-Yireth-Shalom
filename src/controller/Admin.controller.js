@@ -54,7 +54,7 @@ const leerdatos = () => {
 }
 
 
-controlador.reservasp = (req, res) => {
+/*controlador.reservasp = (req, res) => {
     console.log(req.body);
 
     db.collection("clientes").add({
@@ -65,6 +65,7 @@ controlador.reservasp = (req, res) => {
             fecha_de_entrada: req.body.fechaentrada,
             fecha_de_salida: req.body.fechasalida,
             tipo_habitacion: req.body.tipohabitacion,
+            numero_habitacion: req.body.nhabitacion,
             estado_cliente: req.body.estadoo,
         })
         .then((docRef) => {
@@ -76,11 +77,39 @@ controlador.reservasp = (req, res) => {
             console.error("Error: ", error);
         });
 
-
     res.render('./reservasP');
+}*/
+
+
+controlador.reservasp = async (req, res) => {
+    console.log(req.body);
+    await db.collection("clientes").add({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            correoe_lectronico: req.body.correoelectronico,
+            telefono: req.body.telefono,
+            fecha_de_entrada: req.body.fechaentrada,
+            fecha_de_salida: req.body.fechasalida,
+            tipo_habitacion: req.body.tipohabitacion,
+            numero_habitacion: req.body.nhabitacion,
+            estado_cliente: req.body.estadoo,
+        })
+        .then(async (docRef) => {
+            await docRef.update({
+                idcliente: docRef.id
+            })
+            console.log("Document written with ID: ", docRef.id);
+            alert('Reserva realizada', docRef.id);
+            limpiarDatos();
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        });
+        res.render('./reservasP');
 }
 
-controlador.reservasd = (req, res) => {
+
+/*controlador.reservasd = (req, res) => {
     console.log(req.body);
     db.collection("clientes").add({
             nombre: req.body.nombre,
@@ -102,9 +131,36 @@ controlador.reservasd = (req, res) => {
         });
 
     res.render('./habitacionD');
+}*/
+
+controlador.reservasd = async (req, res) => {
+    console.log(req.body);
+    await db.collection("clientes").add({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            correoe_lectronico: req.body.correoelectronico,
+            telefono: req.body.telefono,
+            fecha_de_entrada: req.body.fechaentrada,
+            fecha_de_salida: req.body.fechasalida,
+            tipo_habitacion: req.body.tipohabitacion,
+            numero_habitacion: req.body.nhabitacion,
+            estado_cliente: req.body.estadoo,
+        })
+        .then(async (docRef) => {
+            await docRef.update({
+                idcliente: docRef.id
+            })
+            console.log("Document written with ID: ", docRef.id);
+            alert('Reserva realizada', docRef.id);
+            limpiarDatos();
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        });
+        res.render('./habitacionD');
 }
 
-controlador.reservase = (req, res) => {
+/*controlador.reservase = (req, res) => {
     console.log(req.body);
 
     db.collection("clientes").add({
@@ -127,9 +183,37 @@ controlador.reservase = (req, res) => {
         });
 
     res.render('./habitacionE');
+}*/
+
+controlador.reservase = async (req, res) => {
+    console.log(req.body);
+    await db.collection("clientes").add({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            correoe_lectronico: req.body.correoelectronico,
+            telefono: req.body.telefono,
+            fecha_de_entrada: req.body.fechaentrada,
+            fecha_de_salida: req.body.fechasalida,
+            tipo_habitacion: req.body.tipohabitacion,
+            numero_habitacion: req.body.nhabitacion,
+            estado_cliente: req.body.estadoo,
+        })
+        .then(async (docRef) => {
+            await docRef.update({
+                idcliente: docRef.id
+            })
+            console.log("Document written with ID: ", docRef.id);
+            alert('Reserva realizada', docRef.id);
+            limpiarDatos();
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        });
+        res.render('./habitacionE');
 }
 
-controlador.reservass = (req, res) => {
+
+/*controlador.reservass = (req, res) => {
     console.log(req.body);
     db.collection("clientes").add({
             nombre: req.body.nombre,
@@ -151,12 +235,11 @@ controlador.reservass = (req, res) => {
         });
 
     res.render('./habitacionS');
-}
+}*/
 
-
-controlador.reservasa = async (req, res) => {
+controlador.reservass = async (req, res) => {
     console.log(req.body);
-    db.collection("clientes").add({
+    await db.collection("clientes").add({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             correoe_lectronico: req.body.correoelectronico,
@@ -167,7 +250,10 @@ controlador.reservasa = async (req, res) => {
             numero_habitacion: req.body.nhabitacion,
             estado_cliente: req.body.estadoo,
         })
-        .then((docRef) => {
+        .then(async (docRef) => {
+            await docRef.update({
+                idcliente: docRef.id
+            })
             console.log("Document written with ID: ", docRef.id);
             alert('Reserva realizada', docRef.id);
             limpiarDatos();
@@ -175,9 +261,7 @@ controlador.reservasa = async (req, res) => {
         .catch((error) => {
             console.error("Error: ", error);
         });
-    res.render("./admin", {
-        clientes: await leerdatos()
-    });
+        res.render('./habitacionS');
 }
 
 
@@ -215,6 +299,7 @@ controlador.loginn = (req, res) => {
             limpiarDatosLogin();
         });
 }
+
 controlador.cerrarSesion = (req, res) => {
     console.log(req.body);
     auth.signOut()
